@@ -9,31 +9,27 @@ const money = {
     H: 50,
 };
     
-        
-    
-        if (Math.floor(currency/money.H) > 0) {
+    if (Math.floor(currency/money.H) > 0) {
             coins.H = Math.floor(currency/money.H);
             currency -= coins.H*money.H;
-        }
-    
-        if (Math.floor(currency/money.Q) > 0) {
+    }
+    if (Math.floor(currency/money.Q) > 0) {
             coins.Q = Math.floor(currency/money.Q);
             currency -= coins.Q*money.Q;
-        }
-    
-        if (Math.floor(currency/money.D) > 0) {
+    }
+    if (Math.floor(currency/money.D) > 0) {
             coins.D = Math.floor(currency/money.D);
             currency -= coins.D*money.D;
-        }
-    
-        if (Math.floor(currency/money.N) > 0) {
+    }
+    if (Math.floor(currency/money.N) > 0) {
             coins.N = Math.floor(currency/money.N);
             currency -= coins.N*money.N;
-        }
-    
-        if (Math.floor(currency/money.P) > 0) {
+    }
+    if (Math.floor(currency/money.P) > 0) {
             coins.P = Math.floor(currency/money.P);
-        }
-    
+    }
+    if (currency > 10000 ) {
+            return {error: "You are rich, my friend! We don't have so much coins for exchange"}
+    }
         return coins;
     }
