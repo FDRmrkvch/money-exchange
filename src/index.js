@@ -1,6 +1,6 @@
 module.exports = function makeExchange(currency) {
 
-    let coins = {};
+let coins = {};
 const money = {
     P: 1,
     N: 5,
@@ -29,7 +29,8 @@ const money = {
             coins.P = Math.floor(currency/money.P);
     }
     if (currency > 10000 ) {
-            return {error: "You are rich, my friend! We don't have so much coins for exchange"}
+        return {error: "You are rich, my friend! We don't have so much coins for exchange"}
     }
-        return coins;
-    }
+    
+return coins;
+}
